@@ -1,7 +1,7 @@
 let firstName = "Charlene"
 let lastName = "Tolentino";
 let yearsOfStudy = 1;
-let  goal = 'become a debecome a technical project manager';
+let  goal = 'become a technical project manager';
 
 //("My name is " + firstName + " " + lastName + ". I have been at SCC for " + yearsOfStudy + " years and plan to " + goal + " after completing my courses.");
 
