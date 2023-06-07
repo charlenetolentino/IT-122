@@ -1,0 +1,39 @@
+<!-- charlene tolentino-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Cat facts Button</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/forms.css">
+</head>
+
+<body>
+    <button onclick="showCatFact()">Get a cat fact!</button>
+
+    <p id="catfact"></p>
+    <script>
+        async function getCatFact() {
+            const api_endpoint = "https://cat-fact.herokuapp.com/facts/random?amount=1"
+            const response = await fetch(api_endpoint);
+            const json_response = await response.json();
+
+            console.log(json_response);
+            return json_response;
+        }
+
+        async function showCatFact() {
+            const catFactResponse = await getCatFact();
+            const paragraphTag = document.getElementById("catfact");
+            paragraphTag.innerText = catFactResponse.text;
+            
+        }
+
+    </script>
+</body>
+<footer><a href=../index.html>Home</a></footer>
+
+</html>
